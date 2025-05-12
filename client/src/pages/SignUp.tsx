@@ -1,10 +1,11 @@
 import AuthForm, { AuthDataType } from "@/components/AuthForm";
 import Footer from "@/components/Footer";
+import axios from "axios";
 
 const SignUp = () => {
-  const submit = (data: AuthDataType) => {
-    console.log(data);
-    
+  const submit = async (data: AuthDataType) => {
+    delete data.confirmPassword;
+    await axios.post("http://localhost:3000/api/register", data);
   };
 
   return (
