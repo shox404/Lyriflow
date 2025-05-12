@@ -13,7 +13,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cors());
 
-app.use('/api/user', require('./routes/user'));
-app.use('/api/employees', require('./routes/employees'));
+app.use('/auth', require('./routes/auth'));
 
-module.exports = app;
+app.listen(8080, () => console.log("Post: 8080"))
