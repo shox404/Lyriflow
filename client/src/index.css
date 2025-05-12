@@ -1,0 +1,70 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Apply dark theme colors directly to root */
+    --background: 260 20% 10%;
+    --foreground: 260 10% 90%;
+
+    --card: 260 20% 12%;
+    --card-foreground: 260 10% 90%;
+
+    --popover: 260 20% 10%;
+    --popover-foreground: 260 10% 90%;
+
+    --primary: 101 45% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 76% 93%;
+    --secondary-foreground: 260 10% 20%;
+
+    --muted: 260 10% 20%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 43 76% 93%;
+    --accent-foreground: 260 10% 90%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 260 10% 90%;
+
+    --border: 260 10% 25%;
+    --input: 260 10% 25%;
+    --ring: 101 45% 75%;
+
+    --sidebar-background: 260 10% 5%;
+    --sidebar-foreground: 260 20% 95%;
+    --sidebar-primary: 101 45% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 10% 10%;
+    --sidebar-accent-foreground: 260 20% 95%;
+    --sidebar-border: 260 10% 15%;
+    --sidebar-ring: 101 45% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .music-card {
+    @apply bg-card rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-music-primary to-music-accent;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
