@@ -1,12 +1,12 @@
-const { Client, Storage, Account } = require("appwrite");
+const { Client, Databases } = require("node-appwrite");
 
 const client = new Client();
 
 client
     .setEndpoint(process.env.APPWRITE_ENDPOINT)
-    .setProject(process.env.APPWRITE_PROJECT);
+    .setProject(process.env.APPWRITE_PROJECT)
+    .setKey(process.env.APPWRITE_API_KEY);
 
-const storage = new Storage(client);
-const account = new Account(client);
+const databases = new Databases(client);
 
-module.exports = { storage, account }
+module.exports = { databases };

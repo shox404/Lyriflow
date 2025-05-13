@@ -10,7 +10,6 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "appwrite": "^17.0.2",
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
